@@ -1,0 +1,21 @@
+<html>
+<head>
+ <title>Passport App</title>
+</head>
+<body>
+<div>
+
+<h1>Welcome <%= user.displayName %>!</h1>
+<br/>
+<img src=<%=user.image%> alt="image" />
+<br/>
+
+<br/>
+
+<%if(user.facebook){%>
+	Your Friends Count : <%=user.friendsCount %>
+<%}%>
+
+</div>
+</body>
+</html>

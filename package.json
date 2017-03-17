@@ -1,0 +1,29 @@
+{
+  "name": "passportapp",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "~1.16.0",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.0",
+    "ejs": "^2.5.6",
+    "express": "~4.14.1",
+    "express-session": "^1.15.1",
+    "jade": "~1.11.0",
+    "mongoose": "^4.9.0",
+    "morgan": "~1.7.0",
+    "oauth": "^0.9.15",
+    "passport": "^0.3.2",
+    "passport-facebook": "^2.1.1",
+    "passport-github": "^1.1.0",
+    "passport-google-oauth": "^1.0.0",
+    "passport-google-oauth20": "^1.0.0",
+    "passport-instagram": "^1.0.0",
+    "passport-linkedin": "^1.0.0",
+    "passport-twitter": "^1.0.4",
+    "serve-favicon": "~2.3.2"
+  }
+}
