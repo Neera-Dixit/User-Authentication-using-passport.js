@@ -5,7 +5,7 @@ var router = express.Router();
 router.route('/google/callback')
 	   .get(passport.authenticate('google',{
 	   		successRedirect : '/users/',
-	   		failure : '/error/'
+	   		failureRedirect : '/error/'
 	   }));
 	
 router.route('/google')
@@ -16,7 +16,7 @@ router.route('/google')
 router.route('/twitter/callback')
 	   .get(passport.authenticate('twitter',{
 	   		successRedirect : '/users/',
-	   		failure : '/error/'
+	   		failureRedirect : '/error/'
 	   }));
 	
 router.route('/twitter')
@@ -25,7 +25,7 @@ router.route('/twitter')
 router.route('/facebook/callback')
 	   .get(passport.authenticate('facebook',{
 	   		successRedirect : '/users/',
-	   		failure : '/error/'
+	   		failureRedirect : '/error/'
 	   }));
 	
 router.route('/facebook')
@@ -36,7 +36,7 @@ router.route('/facebook')
 router.route('/github/callback')
 	   .get(passport.authenticate('github',{
 	   		successRedirect : '/users/',
-	   		failure : '/error/'
+	   		failureRedirect : '/error/'
 	   }));
 	
 router.route('/github')
@@ -45,7 +45,7 @@ router.route('/github')
 router.route('/linkedin/callback')
 	   .get(passport.authenticate('linkedin',{
 	   		successRedirect : '/users/',
-	   		failure : '/error/'
+	   		failureRedirect : '/error/'
 	   }));
 	
 router.route('/linkedin')
@@ -54,9 +54,26 @@ router.route('/linkedin')
 router.route('/instagram/callback')
 	   .get(passport.authenticate('instagram',{
 	   		successRedirect : '/users/',
-	   		failure : '/error/'
+	   		failureRedirect : '/error/'
 	   }));
 	
 router.route('/instagram')
 	   .get(passport.authenticate('instagram'));
+
+router.route('/local')
+	   .post(passport.authenticate('local-login',{
+	   	 	successRedirect : '/profile/',
+	   		failureRedirect : '/'
+	   }));
+
+
+router.route('/signup')
+	  .get(function(req,res){
+	  	res.render('register');
+	  })
+	   .post(passport.authenticate('local-register',{
+	   	 	successRedirect : '/profile/',
+	   		failure : '/auth/signup/'
+	   }));
+
 module.exports = router;   

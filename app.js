@@ -11,7 +11,7 @@ var mongoose = require('mongoose');
 var index = require('./routes/index');
 var users = require('./routes/users');
 var auth = require('./routes/auth');
-
+var profile =  require('./routes/profile');
 mongoose.connect('mongodb://localhost/passportdb');
 
 var app = express();
@@ -33,7 +33,9 @@ require('./config/passport')(app);
 
 app.use('/', index);
 app.use('/users', users);
+app.use('/profile', profile);
 app.use('/auth',auth);
+//app.use('/signup',signup);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
