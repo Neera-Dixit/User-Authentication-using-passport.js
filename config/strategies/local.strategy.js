@@ -9,7 +9,6 @@ module.exports = function(){
 		{usernameField:"username", passwordField:"password",passReqToCallback : true},
   		function(req,username, password, done) {
 
-  			
 			var query = {
             	'local.email' : req.body.username
         	}; 
@@ -21,7 +20,6 @@ module.exports = function(){
  				}	
 
  				if(user){
- 					console.log("req.body");
  					done(null,false);
  				}
  				else{

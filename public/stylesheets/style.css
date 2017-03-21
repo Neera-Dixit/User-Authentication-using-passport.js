@@ -1,6 +1,41 @@
 body {
   padding: 50px;
+  width: 100%
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+#login{
+	margin: 0 auto;
+	width: 18%;
+	border: 1px solid black;
+}
+
+#login > form {
+	width: 80%;
+    margin: 0 auto;
+}
+
+#login>form + div {
+	width: 80%;
+    margin: 10px auto;
+}
+
+#register{
+	width: 20%;
+    margin: 0 auto;
+    border: 1px solid black;
+    padding: 15px;
+}
+
+#logout{
+	position: absolute;
+    right: 10%;
+    top: 10%;
+    width: 11%;
+}
+
+a{
+	text-decoration: none;
 }
 
 li{
@@ -8,4 +43,9 @@ li{
 }
 #social-icons li {
 	list-style-type: none;
+}
+
+#profile{
+	width: 25%;
+    margin: 0 auto;
 }

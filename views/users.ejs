@@ -1,20 +1,23 @@
 <html>
 <head>
  <title>Passport App</title>
+  <link rel="stylesheet" href="/stylesheets/style.css" />
 </head>
 <body>
 <div>
 
-<h1>Welcome <%= user.displayName %>!</h1>
-<br/>
+<button id="logout"><a href="/auth/logout">LogOut</a></button>
+
+<div id="profile">
+<h2>Welcome <%= user.displayName %>!</h2>
 <img src=<%=user.image%> alt="image" />
 <br/>
-
 <br/>
-
 <%if(user.facebook){%>
-	Your Friends Count : <%=user.friendsCount %>
+	<b>Your Friends Count : <%=user.friendsCount %></b>
 <%}%>
+</div>
+
 
 </div>
 </body>

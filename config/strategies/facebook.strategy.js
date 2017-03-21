@@ -13,7 +13,6 @@ module.exports = function(){
 
 	},
 	function(req,accessToken,refreshToken,profile,done){
-        console.log("at : ",accessToken);
 
                 var query = {
             'facebook.id' : profile.id

@@ -22,7 +22,6 @@ router.get('/', function(req, res, next) {
 
 			facebook.getFriends(req.user.facebook.token,function(results){
 				user.friendsCount = results.total_count;
-				console.log(user);
 				res.render('users',{
 		 			user : user
 				});

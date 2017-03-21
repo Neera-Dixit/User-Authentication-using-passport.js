@@ -76,4 +76,10 @@ router.route('/signup')
 	   		failure : '/auth/signup/'
 	   }));
 
+router.route('/logout')
+	  .get(function(req,res){
+	  		req.logOut();
+	  		res.redirect('/');
+	  })
+
 module.exports = router;   
